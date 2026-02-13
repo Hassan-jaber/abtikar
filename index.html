@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="موقع منظمة عربية احترافية - نقدم خدمات متميزة في مجالات متعددة">
+    <meta name="theme-color" content="#4F46E5">
+    
+    <!-- Performance Optimizations -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <link rel="dns-prefetch" href="https://unpkg.com">
+    
+    <title>منظمة الابتكار - الريادة في التميز</title>
+    
+    <!-- Critical CSS Inline for First Paint -->
+    <style>
+        /* Critical CSS - Above the fold */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        *{scrollbar-width:none;-ms-overflow-style:none}*::-webkit-scrollbar{display:none}
+        html{scroll-behavior:smooth;overflow-x:hidden;width:100%}
+        body{font-family:'Cairo',sans-serif;font-size:1rem;color:#1F2937;background-color:#FFFFFF;line-height:1.7;overflow-x:hidden;width:100%;position:relative}
+        .header{position:fixed;top:0;right:0;width:100%;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,0.08);z-index:100;transition:all .3s ease}
+        .container{max-width:1200px;margin-inline:auto;padding-inline:1.5rem;width:100%;overflow-x:hidden}
+        .hero{padding-top:calc(4.5rem + 3rem);min-height:100vh;display:flex;align-items:center;position:relative;background:linear-gradient(to bottom,#FFFFFF 0%,#F9FAFB 100%);width:100%;overflow:hidden}
+        .nav{height:4.5rem;display:flex;justify-content:space-between;align-items:center}
+        .button{display:inline-flex;align-items:center;gap:.5rem;padding:1rem 2rem;border-radius:1rem;font-weight:600;transition:all .3s ease;position:relative;overflow:hidden;cursor:pointer}
+        .button--primary{background:linear-gradient(135deg,#4F46E5 0%,#4338CA 100%);color:#fff;box-shadow:0 4px 16px rgba(0,0,0,0.12)}
+    </style>
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" as="style">
+    
+    <!-- Main Stylesheet - Async Load -->
+    <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all';this.onload=null;">
+    <noscript><link rel="stylesheet" href="styles.css"></noscript>
+    
+    <!-- Fonts - Async Loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet"></noscript>
+    
+    <!-- Font Awesome - Deferred -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    
+    <!-- Swiper CSS - Lazy Load -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"></noscript>
+    
+    <!-- AOS CSS - Lazy Load -->
+    <link rel="preload" href="https://unpkg.com/aos@2.3.1/dist/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"></noscript>
+    
+    <!-- Load Swiper JS early with defer (non-blocking but guaranteed to load before DOMContentLoaded) -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+
+</head>
+<body>
+    
+    <!-- ==================== HEADER / NAVIGATION ==================== -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <svg class="nav__logo-svg" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg" aria-label="منظمة الابتكار">
+                    <defs>
+                        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#4F46E5;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#7C3AED;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <path d="M25 5 L30 20 L35 25 L30 30 L25 45 L20 30 L15 25 L20 20 Z" fill="url(#logoGradient)"/>
+                    <path d="M15 25 L10 30 L15 28 Z" fill="#4338CA" opacity="0.8"/>
+                    <path d="M35 25 L40 30 L35 28 Z" fill="#4338CA" opacity="0.8"/>
+                    <circle cx="25" cy="20" r="3" fill="#fff"/>
+                    <ellipse cx="25" cy="45" rx="4" ry="6" fill="#F59E0B" opacity="0.7"/>
+                </svg>
+                <span>منظمة الابتكار</span>
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link">الرئيسية</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">من نحن</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#services" class="nav__link">خدماتنا</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#portfolio" class="nav__link">أعمالنا</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#testimonials" class="nav__link">آراء العملاء</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link">اتصل بنا</a>
+                    </li>
+                </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+
+            <div class="nav__actions">
+                <button class="nav__theme" id="theme-button" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon" id="theme-icon"></i>
+                </button>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ==================== MAIN CONTENT ==================== -->
+    <main class="main">
+        
+        <!-- ==================== HERO SECTION ==================== -->
+        <section class="hero section" id="home">
+            <div class="hero__container container grid">
+                <div class="hero__content">
+                    <span class="hero__subtitle" data-aos="fade-up">مرحباً بكم في</span>
+                    <h1 class="hero__title" data-aos="fade-up" data-aos-delay="100">
+                        منظمة <span class="gradient-text">الابتكار</span>
+                    </h1>
+                    <p class="hero__description" data-aos="fade-up" data-aos-delay="200">
+                        نحن نقدم حلولاً مبتكرة ومتطورة لتحقيق أهدافك التجارية والإبداعية. 
+                        نجمع بين الخبرة والتكنولوجيا لتقديم أفضل النتائج
+                    </p>
+                    <div class="hero__buttons" data-aos="fade-up" data-aos-delay="300">
+                        <a href="#contact" class="button button--primary">
+                            ابدأ الآن
+                            <i class="fas fa-arrow-left"></i>
+                        </a>
+                        <a href="#about" class="button button--secondary">
+                            اكتشف المزيد
+                        </a>
+                    </div>
+                    
+                    <div class="hero__stats" data-aos="fade-up" data-aos-delay="400">
+                        <div class="hero__stat">
+                            <h3 class="hero__stat-number">500+</h3>
+                            <p class="hero__stat-text">مشروع مكتمل</p>
+                        </div>
+                        <div class="hero__stat">
+                            <h3 class="hero__stat-number">300+</h3>
+                            <p class="hero__stat-text">عميل سعيد</p>
+                        </div>
+                        <div class="hero__stat">
+                            <h3 class="hero__stat-number">15+</h3>
+                            <p class="hero__stat-text">سنة خبرة</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero__image" data-aos="fade-right" data-aos-delay="500">
+                    <div class="hero__blob">
+                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="#4F46E5" d="M44.7,-76.4C58.8,-69.2,71.8,-59.1,79.6,-45.8C87.4,-32.6,90,-16.3,88.5,-0.9C87,14.6,81.4,29.2,73.1,42.3C64.8,55.4,53.8,67,40.6,74.7C27.4,82.4,13.7,86.2,-0.9,87.8C-15.5,89.4,-31,88.8,-44.3,81.5C-57.6,74.2,-68.7,60.2,-76.3,44.8C-83.9,29.4,-88,12.7,-87.4,-3.7C-86.8,-20.1,-81.5,-40.2,-71.8,-55.8C-62.1,-71.4,-48,-82.5,-32.8,-89.1C-17.6,-95.7,-1.1,-97.8,13.9,-95.3C28.9,-92.8,30.6,-83.6,44.7,-76.4Z" transform="translate(100 100)" />
+                        </svg>
+                    </div>
+                    <div class="hero__illustration">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Floating Elements -->
+            <div class="floating-elements">
+                <div class="floating-element" style="top: 10%; right: 10%;">
+                    <i class="fas fa-code"></i>
+                </div>
+                <div class="floating-element" style="top: 60%; right: 5%;">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                <div class="floating-element" style="top: 80%; right: 20%;">
+                    <i class="fas fa-rocket"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== ABOUT SECTION ==================== -->
+        <section class="about section" id="about">
+            <div class="about__container container grid">
+                <div class="about__image" data-aos="fade-left">
+                    <div class="about__img-wrapper">
+                        <div class="about__shape"></div>
+                        <i class="fas fa-users about__icon"></i>
+                    </div>
+                </div>
+
+                <div class="about__content">
+                    <span class="section__subtitle" data-aos="fade-up">من نحن</span>
+                    <h2 class="section__title" data-aos="fade-up" data-aos-delay="100">
+                        نحن نبني <span class="gradient-text">المستقبل</span>
+                    </h2>
+                    <p class="about__description" data-aos="fade-up" data-aos-delay="200">
+                        منذ أكثر من 15 عاماً ونحن نعمل على تقديم أفضل الحلول التقنية والإبداعية لعملائنا. 
+                        نؤمن بأن النجاح يأتي من خلال الابتكار المستمر والتفاني في العمل.
+                    </p>
+                    
+                    <div class="about__features" data-aos="fade-up" data-aos-delay="300">
+                        <div class="about__feature">
+                            <div class="about__feature-icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="about__feature-content">
+                                <h4>رؤية واضحة</h4>
+                                <p>نعمل وفق خطط استراتيجية محكمة لتحقيق الأهداف</p>
+                            </div>
+                        </div>
+                        
+                        <div class="about__feature">
+                            <div class="about__feature-icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="about__feature-content">
+                                <h4>فريق محترف</h4>
+                                <p>لدينا فريق من الخبراء المتخصصين في مجالاتهم</p>
+                            </div>
+                        </div>
+                        
+                        <div class="about__feature">
+                            <div class="about__feature-icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="about__feature-content">
+                                <h4>جودة عالية</h4>
+                                <p>نلتزم بأعلى معايير الجودة في جميع مشاريعنا</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#contact" class="button button--primary" data-aos="fade-up" data-aos-delay="400">
+                        تواصل معنا
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SERVICES SECTION ==================== -->
+        <section class="services section" id="services">
+            <div class="container">
+                <div class="section__header" data-aos="fade-up">
+                    <span class="section__subtitle">ماذا نقدم</span>
+                    <h2 class="section__title">
+                        خدماتنا <span class="gradient-text">المتميزة</span>
+                    </h2>
+                    <p class="section__description">
+                        نقدم مجموعة شاملة من الخدمات الاحترافية التي تلبي احتياجاتك
+                    </p>
+                </div>
+
+                <div class="services__container grid">
+                    <!-- Service 1 -->
+                    <div class="service__card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="service__icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3 class="service__title">تطوير الويب</h3>
+                        <p class="service__description">
+                            نصمم ونطور مواقع إلكترونية حديثة وسريعة تتناسب مع احتياجات عملك
+                        </p>
+                        <a href="#" class="service__link">
+                            اقرأ المزيد
+                            <i class="fas fa-arrow-left"></i>
+                        </a>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="service__card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="service__icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3 class="service__title">تطبيقات الجوال</h3>
+                        <p class="service__description">
+                            نطور تطبيقات الهاتف المحمول بتقنيات حديثة لنظامي iOS و Android
+                        </p>
+                        <a href="#" class="service__link">
+                            اقرأ المزيد
+                            <i class="fas fa-arrow-left"></i>
+                        </a>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="service__card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="service__icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <h3 class="service__title">التصميم الإبداعي</h3>
+                        <p class="service__description">
+                            نقدم تصاميم مبتكرة وجذابة تعكس هوية علامتك التجارية بشكل احترافي
+                        </p>
+                        <a href="#" class="service__link">
+                            اقرأ المزيد
+                            <i class="fas fa-arrow-left"></i>
+                        </a>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div class="service__card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="service__icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 class="service__title">التسويق الرقمي</h3>
+                        <p class="service__description">
+                            نساعدك في الوصول إلى جمهورك المستهدف من خلال استراتيجيات تسويقية فعالة
+                        </p>
+                        <a href="#" class="service__link">
+                            اقرأ المزيد
+                            <i class="fas fa-arrow-left"></i>
+                        </a>
+                    </div>
+
+                    <!-- Service 5 -->
+                    <div class="service__card" data-aos="fade-up" data-aos-delay="500">
+                        <div class="service__icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="service__title">الأمن السيبراني</h3>
+                        <p class="service__description">
+                            نوفر حلول أمنية متقدمة لحماية بياناتك وأنظمتك من التهديدات الإلكترونية
+                        </p>
+                        <a href="#" class="service__link">
+                            اقرأ المزيد
+                            <i class="fas fa-arrow-left"></i>
+                        </a>
+                    </div>
+
+                    <!-- Service 6 -->
+                    <div class="service__card" data-aos="fade-up" data-aos-delay="600">
+                        <div class="service__icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h3 class="service__title">الحوسبة السحابية</h3>
+                        <p class="service__description">
+                            نساعدك في الانتقال إلى السحابة وإدارة البنية التحتية بكفاءة عالية
+                        </p>
+                        <a href="#" class="service__link">
+                            اقرأ المزيد
+                            <i class="fas fa-arrow-left"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== PORTFOLIO SECTION ==================== -->
+        <section class="portfolio section" id="portfolio">
+            <div class="container">
+                <div class="section__header" data-aos="fade-up">
+                    <span class="section__subtitle">أعمالنا</span>
+                    <h2 class="section__title">
+                        معرض <span class="gradient-text">أعمالنا</span>
+                    </h2>
+                    <p class="section__description">
+                        اطلع على بعض المشاريع التي أنجزناها بنجاح
+                    </p>
+                </div>
+
+                <div class="portfolio__filters" data-aos="fade-up" data-aos-delay="100">
+                    <button class="portfolio__filter active" data-filter="all">الكل</button>
+                    <button class="portfolio__filter" data-filter="web">مواقع ويب</button>
+                    <button class="portfolio__filter" data-filter="mobile">تطبيقات</button>
+                    <button class="portfolio__filter" data-filter="design">تصميم</button>
+                </div>
+
+                <div class="portfolio__container grid">
+                    <!-- Portfolio Item 1 -->
+                    <div class="portfolio__item" data-category="web" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="portfolio__img">
+                            <div class="portfolio__placeholder">
+                                <img src="images/E-commerce platform.jpg" alt="منصة التجارة الإلكترونية" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="portfolio__content">
+                            <span class="portfolio__category">موقع إلكتروني</span>
+                            <h3 class="portfolio__title">منصة التجارة الإلكترونية</h3>
+                            <p class="portfolio__description">
+                                تطوير منصة تجارة إلكترونية متكاملة بميزات متقدمة
+                            </p>
+                            <a href="#" class="portfolio__link">
+                                عرض المشروع
+                                <i class="fas fa-arrow-left"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Portfolio Item 2 -->
+                    <div class="portfolio__item" data-category="mobile" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="portfolio__img">
+                            <div class="portfolio__placeholder">
+                                <img src="images/Express delivery application.jpg" alt="تطبيق التوصيل السريع" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="portfolio__content">
+                            <span class="portfolio__category">تطبيق جوال</span>
+                            <h3 class="portfolio__title">تطبيق التوصيل السريع</h3>
+                            <p class="portfolio__description">
+                                تطبيق توصيل بتصميم عصري وتجربة مستخدم سلسة
+                            </p>
+                            <a href="#" class="portfolio__link">
+                                عرض المشروع
+                                <i class="fas fa-arrow-left"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Portfolio Item 3 -->
+                    <div class="portfolio__item" data-category="design" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="portfolio__img">
+                            <div class="portfolio__placeholder">
+                                <img src="images/Visual identity.jpg" alt="هوية بصرية متكاملة" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="portfolio__content">
+                            <span class="portfolio__category">تصميم</span>
+                            <h3 class="portfolio__title">هوية بصرية متكاملة</h3>
+                            <p class="portfolio__description">
+                                تصميم هوية بصرية شاملة لشركة ناشئة في مجال التقنية
+                            </p>
+                            <a href="#" class="portfolio__link">
+                                عرض المشروع
+                                <i class="fas fa-arrow-left"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Portfolio Item 4 -->
+                    <div class="portfolio__item" data-category="web" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="portfolio__img">
+                            <div class="portfolio__placeholder">
+                                <img src="images/Educational institution website.jpg" alt="موقع مؤسسة تعليمية" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="portfolio__content">
+                            <span class="portfolio__category">موقع إلكتروني</span>
+                            <h3 class="portfolio__title">موقع مؤسسة تعليمية</h3>
+                            <p class="portfolio__description">
+                                تطوير موقع تفاعلي لمؤسسة تعليمية مع نظام إدارة محتوى
+                            </p>
+                            <a href="#" class="portfolio__link">
+                                عرض المشروع
+                                <i class="fas fa-arrow-left"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Portfolio Item 5 -->
+                    <div class="portfolio__item" data-category="mobile" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="portfolio__img">
+                            <div class="portfolio__placeholder">
+                                <img src="images/Fitness app.jpg" alt="تطبيق اللياقة البدنية" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="portfolio__content">
+                            <span class="portfolio__category">تطبيق جوال</span>
+                            <h3 class="portfolio__title">تطبيق اللياقة البدنية</h3>
+                            <p class="portfolio__description">
+                                تطبيق صحي متكامل لمتابعة التمارين والتغذية
+                            </p>
+                            <a href="#" class="portfolio__link">
+                                عرض المشروع
+                                <i class="fas fa-arrow-left"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Portfolio Item 6 -->
+                    <div class="portfolio__item" data-category="design" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="portfolio__img">
+                            <div class="portfolio__placeholder">
+                                <img src="images/User interface design.jpg" alt="تصميم واجهات المستخدم" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="portfolio__content">
+                            <span class="portfolio__category">تصميم</span>
+                            <h3 class="portfolio__title">تصميم واجهات المستخدم</h3>
+                            <p class="portfolio__description">
+                                تصميم واجهات حديثة وجذابة لتطبيق مالي
+                            </p>
+                            <a href="#" class="portfolio__link">
+                                عرض المشروع
+                                <i class="fas fa-arrow-left"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== WHY CHOOSE US SECTION ==================== -->
+        <section class="why-us section">
+            <div class="container">
+                <div class="section__header" data-aos="fade-up">
+                    <span class="section__subtitle">لماذا تختارنا</span>
+                    <h2 class="section__title">
+                        ما يميزنا عن <span class="gradient-text">الآخرين</span>
+                    </h2>
+                    <p class="section__description">
+                        نحن نقدم قيمة حقيقية من خلال التميز في كل جانب من جوانب عملنا
+                    </p>
+                </div>
+
+                <div class="why-us__container grid">
+                    <!-- Feature 1 -->
+                    <div class="why-us__card" data-aos="flip-left" data-aos-delay="100">
+                        <div class="why-us__icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3 class="why-us__title">خبرة واسعة</h3>
+                        <p class="why-us__description">
+                            أكثر من 15 عاماً من الخبرة في تقديم الحلول التقنية المتطورة
+                        </p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="why-us__card" data-aos="flip-left" data-aos-delay="200">
+                        <div class="why-us__icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3 class="why-us__title">التزام بالمواعيد</h3>
+                        <p class="why-us__description">
+                            نحرص على تسليم المشاريع في الوقت المحدد دون تأخير
+                        </p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="why-us__card" data-aos="flip-left" data-aos-delay="300">
+                        <div class="why-us__icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h3 class="why-us__title">جودة مضمونة</h3>
+                        <p class="why-us__description">
+                            نلتزم بأعلى معايير الجودة في جميع مراحل العمل
+                        </p>
+                    </div>
+
+                    <!-- Feature 4 -->
+                    <div class="why-us__card" data-aos="flip-left" data-aos-delay="400">
+                        <div class="why-us__icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3 class="why-us__title">دعم مستمر</h3>
+                        <p class="why-us__description">
+                            نوفر دعماً فنياً على مدار الساعة لضمان استمرار عملك
+                        </p>
+                    </div>
+
+                    <!-- Feature 5 -->
+                    <div class="why-us__card" data-aos="flip-left" data-aos-delay="500">
+                        <div class="why-us__icon">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <h3 class="why-us__title">أسعار منافسة</h3>
+                        <p class="why-us__description">
+                            نقدم حلولاً ذات جودة عالية بأسعار تنافسية ومعقولة
+                        </p>
+                    </div>
+
+                    <!-- Feature 6 -->
+                    <div class="why-us__card" data-aos="flip-left" data-aos-delay="600">
+                        <div class="why-us__icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3 class="why-us__title">حلول مبتكرة</h3>
+                        <p class="why-us__description">
+                            نستخدم أحدث التقنيات لتقديم حلول إبداعية ومبتكرة
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== TESTIMONIALS SECTION ==================== -->
+        <section class="testimonials section" id="testimonials">
+            <div class="container">
+                <div class="section__header" data-aos="fade-up">
+                    <span class="section__subtitle">آراء العملاء</span>
+                    <h2 class="section__title">
+                        ماذا يقول <span class="gradient-text">عملاؤنا</span>
+                    </h2>
+                    <p class="section__description">
+                        آراء حقيقية من عملاء استفادوا من خدماتنا
+                    </p>
+                </div>
+
+                <div class="testimonials__container swiper" data-aos="fade-up" data-aos-delay="200">
+                    <div class="swiper-wrapper">
+                        <!-- Testimonial 1 -->
+                        <div class="testimonial__card swiper-slide">
+                            <div class="testimonial__header">
+                                <div class="testimonial__avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="testimonial__info">
+                                    <h4 class="testimonial__name">أحمد المحمود</h4>
+                                    <span class="testimonial__position">مدير تنفيذي</span>
+                                </div>
+                            </div>
+                            <div class="testimonial__rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial__text">
+                                "تجربة رائعة مع فريق محترف للغاية. تم تنفيذ المشروع بجودة عالية وفي الوقت المحدد. 
+                                أنصح بشدة بالتعامل معهم."
+                            </p>
+                            <div class="testimonial__quote">
+                                <i class="fas fa-quote-right"></i>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 2 -->
+                        <div class="testimonial__card swiper-slide">
+                            <div class="testimonial__header">
+                                <div class="testimonial__avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="testimonial__info">
+                                    <h4 class="testimonial__name">سارة العلي</h4>
+                                    <span class="testimonial__position">صاحبة مشروع</span>
+                                </div>
+                            </div>
+                            <div class="testimonial__rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial__text">
+                                "فريق متعاون ومبدع. ساعدوني في تطوير موقعي الإلكتروني بشكل احترافي. 
+                                النتيجة فاقت توقعاتي بكثير!"
+                            </p>
+                            <div class="testimonial__quote">
+                                <i class="fas fa-quote-right"></i>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 3 -->
+                        <div class="testimonial__card swiper-slide">
+                            <div class="testimonial__header">
+                                <div class="testimonial__avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="testimonial__info">
+                                    <h4 class="testimonial__name">محمد السالم</h4>
+                                    <span class="testimonial__position">مدير تسويق</span>
+                                </div>
+                            </div>
+                            <div class="testimonial__rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial__text">
+                                "خدمة التسويق الرقمي التي قدموها كانت ممتازة. ساهمت في زيادة مبيعاتنا بشكل ملحوظ. 
+                                شكراً جزيلاً!"
+                            </p>
+                            <div class="testimonial__quote">
+                                <i class="fas fa-quote-right"></i>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 4 -->
+                        <div class="testimonial__card swiper-slide">
+                            <div class="testimonial__header">
+                                <div class="testimonial__avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="testimonial__info">
+                                    <h4 class="testimonial__name">فاطمة الحسن</h4>
+                                    <span class="testimonial__position">مديرة منتجات</span>
+                                </div>
+                            </div>
+                            <div class="testimonial__rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <p class="testimonial__text">
+                                "تطبيق الجوال الذي طوروه لنا كان رائعاً. واجهة سهلة الاستخدام وأداء سريع. 
+                                سعداء جداً بالنتيجة."
+                            </p>
+                            <div class="testimonial__quote">
+                                <i class="fas fa-quote-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Navigation buttons -->
+                    <div class="swiper-button-next">
+                        <i class="fas fa-chevron-left"></i>
+                    </div>
+                    <div class="swiper-button-prev">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                    
+                    <!-- Pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== CONTACT SECTION ==================== -->
+        <section class="contact section" id="contact">
+            <div class="container">
+                <div class="section__header" data-aos="fade-up">
+                    <span class="section__subtitle">تواصل معنا</span>
+                    <h2 class="section__title">
+                        لنبدأ <span class="gradient-text">مشروعك</span>
+                    </h2>
+                    <p class="section__description">
+                        نحن هنا لمساعدتك في تحقيق أهدافك. تواصل معنا الآن
+                    </p>
+                </div>
+
+                <div class="contact__container grid">
+                    <!-- Contact Info -->
+                    <div class="contact__info">
+                        <div class="contact__card" data-aos="fade-left" data-aos-delay="100">
+                            <div class="contact__card-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact__card-content">
+                                <h4>العنوان</h4>
+                                <p>الرياض، المملكة العربية السعودية</p>
+                            </div>
+                        </div>
+
+                        <div class="contact__card" data-aos="fade-left" data-aos-delay="200">
+                            <div class="contact__card-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact__card-content">
+                                <h4>الهاتف</h4>
+                                <p dir="ltr">+966 50 123 4567</p>
+                            </div>
+                        </div>
+
+                        <div class="contact__card" data-aos="fade-left" data-aos-delay="300">
+                            <div class="contact__card-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact__card-content">
+                                <h4>البريد الإلكتروني</h4>
+                                <p dir="ltr"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ee87808881ae87808081988f9a878180c09d8f">[email&#160;protected]</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact__social" data-aos="fade-left" data-aos-delay="400">
+                            <h4>تابعنا على</h4>
+                            <div class="contact__social-links">
+                                <a href="#" class="contact__social-link" aria-label="Facebook">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="contact__social-link" aria-label="Twitter">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="contact__social-link" aria-label="LinkedIn">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="contact__social-link" aria-label="Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <form class="contact__form" id="contact-form" data-aos="fade-right" data-aos-delay="200">
+                        <div class="contact__form-group">
+                            <label for="name" class="contact__label">الاسم الكامل</label>
+                            <input type="text" id="name" class="contact__input" placeholder="أدخل اسمك" required>
+                        </div>
+
+                        <div class="contact__form-group">
+                            <label for="email" class="contact__label">البريد الإلكتروني</label>
+                            <input type="email" id="email" class="contact__input" placeholder="أدخل بريدك الإلكتروني" required>
+                        </div>
+
+                        <div class="contact__form-group">
+                            <label for="phone" class="contact__label">رقم الهاتف</label>
+                            <input type="tel" id="phone" class="contact__input" placeholder="أدخل رقم هاتفك" required>
+                        </div>
+
+                        <div class="contact__form-group">
+                            <label for="subject" class="contact__label">الموضوع</label>
+                            <input type="text" id="subject" class="contact__input" placeholder="موضوع الرسالة" required>
+                        </div>
+
+                        <div class="contact__form-group contact__form-group--full">
+                            <label for="message" class="contact__label">الرسالة</label>
+                            <textarea id="message" class="contact__input contact__textarea" rows="5" placeholder="اكتب رسالتك هنا..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="button button--primary contact__button">
+                            إرسال الرسالة
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+
+                        <p class="contact__message" id="contact-message"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="footer__container container grid">
+            <!-- Footer Column 1 -->
+            <div class="footer__content">
+                <a href="#" class="footer__logo">
+                    <i class="fas fa-rocket"></i>
+                    <span>منظمة الابتكار</span>
+                </a>
+                <p class="footer__description">
+                    نحن نقدم حلولاً مبتكرة ومتطورة لتحقيق أهدافك التجارية والإبداعية. 
+                    نجمع بين الخبرة والتكنولوجيا لتقديم أفضل النتائج.
+                </p>
+                <div class="footer__social">
+                    <a href="#" class="footer__social-link" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="footer__social-link" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="footer__social-link" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="footer__social-link" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Footer Column 2 -->
+            <div class="footer__content">
+                <h4 class="footer__title">روابط سريعة</h4>
+                <ul class="footer__links">
+                    <li><a href="#home" class="footer__link">الرئيسية</a></li>
+                    <li><a href="#about" class="footer__link">من نحن</a></li>
+                    <li><a href="#services" class="footer__link">خدماتنا</a></li>
+                    <li><a href="#portfolio" class="footer__link">أعمالنا</a></li>
+                </ul>
+            </div>
+
+            <!-- Footer Column 3 -->
+            <div class="footer__content">
+                <h4 class="footer__title">خدماتنا</h4>
+                <ul class="footer__links">
+                    <li><a href="#" class="footer__link">تطوير الويب</a></li>
+                    <li><a href="#" class="footer__link">تطبيقات الجوال</a></li>
+                    <li><a href="#" class="footer__link">التصميم الإبداعي</a></li>
+                    <li><a href="#" class="footer__link">التسويق الرقمي</a></li>
+                </ul>
+            </div>
+
+            <!-- Footer Column 4 -->
+            <div class="footer__content">
+                <h4 class="footer__title">اشترك في النشرة</h4>
+                <p class="footer__newsletter-text">
+                    احصل على آخر الأخبار والعروض الحصرية
+                </p>
+                <form class="footer__newsletter">
+                    <input type="email" placeholder="بريدك الإلكتروني" class="footer__input" required>
+                    <button type="submit" class="footer__button" aria-label="Subscribe">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <div class="container">
+                <p class="footer__copy">
+                    &copy; 2024 منظمة الابتكار. جميع الحقوق محفوظة.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== SCROLL UP BUTTON ==================== -->
+    <a href="#" class="scrollup" id="scroll-up" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- ==================== FLOATING CONTACT BUTTONS ==================== -->
+    <div class="floating-contacts" id="floating-contacts">
+        <a href="https://wa.me/966501234567" class="floating-contact whatsapp" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="tel:+966501234567" class="floating-contact phone" aria-label="Phone">
+            <i class="fas fa-phone-alt"></i>
+        </a>
+    </div>
+
+    <!-- ==================== SCRIPTS - Deferred Loading ==================== -->
+    <!-- Swiper JS is already loaded in head -->
+    
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer async></script>
+    
+    <!-- Main JS - Must load after Swiper -->
+    <script src="script.js" defer></script>
+    
+    <!-- Inline Performance Script -->
+    <script>
+        // Immediate critical scripts
+        (function() {
+            // Prevent FOUC
+            document.documentElement.style.opacity = '0';
+            window.addEventListener('load', function() {
+                document.documentElement.style.transition = 'opacity 0.3s';
+                document.documentElement.style.opacity = '1';
+            });
+            
+            // Early theme detection
+            const theme = localStorage.getItem('selected-theme');
+            if (theme === 'dark') {
+                document.body.classList.add('dark-theme');
+            }
+        })();
+    </script>
+
+</body>
+</html>
