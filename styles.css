@@ -1110,8 +1110,8 @@ section,
 /* Swiper Navigation */
 .swiper-button-next,
 .swiper-button-prev {
-  width: 45px;
-  height: 45px;
+  width: 45px !important;
+  height: 45px !important;
   background: var(--bg-color);
   border-radius: 50%;
   box-shadow: var(--shadow-md);
@@ -1157,27 +1157,6 @@ section,
   .swiper-button-prev {
     display: none;
   }
-}
-
-/* Swiper Pagination */
-.swiper-pagination {
-  bottom: 0 !important;
-  padding: 1rem 0;
-}
-
-.swiper-pagination-bullet {
-  width: 10px;
-  height: 10px;
-  background: var(--text-light);
-  opacity: 0.5;
-  transition: all var(--transition-normal);
-}
-
-.swiper-pagination-bullet-active {
-  background: var(--primary-color);
-  opacity: 1;
-  width: 28px;
-  border-radius: 5px;
 }
 
 /* Responsive optimizations */

@@ -226,13 +226,6 @@ function initSwiper() {
             // Center slides
             centeredSlides: false,
             
-            // Pagination
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-                dynamicBullets: true,
-                dynamicMainBullets: 1,
-            },
             
             // Navigation arrows
             navigation: {
@@ -420,17 +413,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-/* ==================== PARALLAX EFFECT ==================== */
-// Parallax disabled to prevent scrollbar issues
-// window.addEventListener('scroll', () => {
-//     const scrolled = window.pageYOffset;
-//     const parallaxElements = document.querySelectorAll('.floating-element');
-    
-//     parallaxElements.forEach((element, index) => {
-//         const speed = 0.5 + (index * 0.1);
-//         element.style.transform = `translateY(${scrolled * speed}px)`;
-//     });
-// });
 
 /* ==================== ANIMATE ON SCROLL ==================== */
 const observerOptions = {
